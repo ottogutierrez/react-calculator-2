@@ -94,7 +94,6 @@ const Calculator = () => {
  
   return (
     <div className="container">
-      <h2>Cloud Calculator by Otto</h2>
       <div className="display">{displayValue}</div>
       <div className="calculator">
         {[
