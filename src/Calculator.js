@@ -88,7 +88,7 @@ const Calculator = () => {
       performOperation();
       setPerformOperationFlag(false);
     }
-  }, [performOperationFlag, operationStack,performOperation()]);
+  }, [performOperationFlag, operationStack,performOperation]);
 
  
   return (
