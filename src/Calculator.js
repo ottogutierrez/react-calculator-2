@@ -62,6 +62,7 @@ const Calculator = () => {
     }
   };
 
+ 
   const performOperation = React.useCallback(() => {
     // Because of useEffect call, we make sure that at this point, all the operation stack
     // has been successfully written to
@@ -81,7 +82,7 @@ const Calculator = () => {
     setNextOperand(false);
     setDisplayValue(result);
     setHistoryStack(operationString);
-  })
+  },[operationStack])
 
   useEffect(() => {
     if (performOperationFlag) {
