@@ -67,7 +67,7 @@ const Calculator = () => {
       performOperation();
       setPerformOperationFlag(false);
     }
-  }, [performOperationFlag, operationStack]);
+  }, [performOperationFlag, operationStack,performOperation()]);
 
   const performOperation = () => {
     // Because of useEffect call, we make sure that at this point, all the operation stack
