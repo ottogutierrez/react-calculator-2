@@ -62,13 +62,6 @@ const Calculator = () => {
     }
   };
 
-  useEffect(() => {
-    if (performOperationFlag) {
-      performOperation();
-      setPerformOperationFlag(false);
-    }
-  }, [performOperationFlag, operationStack,performOperation()]);
-
   const performOperation = () => {
     // Because of useEffect call, we make sure that at this point, all the operation stack
     // has been successfully written to
@@ -89,6 +82,15 @@ const Calculator = () => {
     setDisplayValue(result);
     setHistoryStack(operationString);
   };
+
+  useEffect(() => {
+    if (performOperationFlag) {
+      performOperation();
+      setPerformOperationFlag(false);
+    }
+  }, [performOperationFlag, operationStack,performOperation()]);
+
+ 
   return (
     <div className="container">
       <h2>Cloud Calculator by Otto</h2>
